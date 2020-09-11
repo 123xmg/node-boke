@@ -1,0 +1,8 @@
+{
+    "db": {
+        "user": "xmg",
+        "host": "localhost",
+        "port": "27017",
+        "name": "boke"
+    }
+}

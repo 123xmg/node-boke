@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/admin/css/base.css">
+</head>
+
+<body>
+    <div class="login-body">
+        <div class="login-container">
+            <h4 class="title">登录博客</h4>
+            <div class="login">
+                <form action="/admin/login" method="post" id="loginForm">
+                    <div class="form-group">
+                        <label>邮件</label>
+                        <input type="email" name='email' class="form-control" placeholder="请输入邮件地址">
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <input type="password" name='password' class="form-control" placeholder="请输入密码">
+                    </div>
+                    <button type="submit" class="btn btn-primary">登录</button>
+                </form>
+            </div>
+            <div class="tips"></div>
+        </div>
+    </div>
+    <script src="/admin/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/admin/js/common.js"></script>
+
+    <script>
+        //为表单提交事件
+        $('#loginForm').on('submit',function(){
+            //获取提交的所有内容 
+            //返回值[{name:'email',value:'用户输入的值'}，{name:'password',value:'用户输入的值'}]
+            //但是想要的类型是 {email:'用户输入的值'，password:'用户输入的值'} 通过方法实现
+            var result=serializeArrayToJson($(this));
+            //console.log(result);
+            //验证用户信息
+            if(result.email.trim().length==0){
+                alert('请输入邮箱地址');
+                return false;
+                
+            }
+            if(result.password.trim().length==0){
+                 alert('请输入密码');
+                return false;   
+                }
+            // //阻止表单默认行为 如果走到此处，说明已经验证成功
+            // return false;
+        })
+        
+    </script>
+</body>
+
+</html>

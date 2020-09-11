@@ -1,0 +1,28 @@
+<div class="header">
+		<div class="w1100">
+			<!-- 网站logo开始 -->
+			<h1 class="logo fl">
+				<a href="/home/"><img src="images/logo.png" alt="黑马程序员"></a>
+			</h1>
+			<!-- 网站logo结束 -->
+			<!-- 网站导航开始 -->
+			<ul class="navigation fr">
+				<li>
+					<a id="firstPage" href="/home/">首页</a>
+				</li>
+				{{if userInfo && userInfo.username!==null}}
+					<li>
+						<a href="/home/">{{userInfo.username}}</a>
+					</li>
+					<li>
+						<a href="/home/user-loginout" id="loginIn">退出</a>
+					</li>
+				{{else}}
+					<li>
+						<a href="/admin/login" id="loginIn">登录</a>
+					</li>
+				{{/if}}
+			</ul>
+			<!-- 网站导航结束 -->
+		</div>
+</div>
