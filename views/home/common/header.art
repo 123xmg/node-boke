@@ -2,8 +2,11 @@
 		<div class="w1100">
 			<!-- 网站logo开始 -->
 			<h1 class="logo fl">
-				<a href="/home/"><img src="images/logo.png" alt="黑马程序员"></a>
+				<a href="/home/" title="Frando博客">
+					<img src="images/logo2.png" alt="free博客">
+				</a>
 			</h1>
+			
 			<!-- 网站logo结束 -->
 			<!-- 网站导航开始 -->
 			<ul class="navigation fr">

@@ -27,7 +27,7 @@ module.exports = async (req, res) => {
         res.redirect("/home/");
       }
     } else {
-      res.status(400).render("admin/error", { msg: "管理员不存在" });
+      res.status(400).render("admin/error", { msg: "邮箱或密码错误" });
     }
   } else {
     // 用户不存在

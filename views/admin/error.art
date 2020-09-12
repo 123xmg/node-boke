@@ -1,6 +1,6 @@
 {{extend './common/layout.art'}}//继承骨架
 {{block 'main'}}
-<p class="bg-danger error">{{msg}}</p>
+    <p class="bg-danger error">{{msg}}</p>
 {{/block}}
 //三秒跳回login界面
 {{block 'script'}}

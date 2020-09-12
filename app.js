@@ -53,12 +53,7 @@ app.use('/admin', admin);
 //错误处理，因为错误界面的参数是不固定的，所以用数组方式存储，用join方式拼接
 app.use((err, req, res, next) => {
     //将字符串转换为对象
-    console.log(err);
-    
-    console.log("--------");
     const result = JSON.parse(err);
-    console.log(result);
-    console.log("--------");
     let params = [];
     for (let res in result) {
         params.push(res + "=" + result[res]);

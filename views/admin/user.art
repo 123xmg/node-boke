@@ -12,7 +12,7 @@
         <div class="main">
         	<!-- 分类标题 -->
             <div class="title">
-                <h4>用户： {{ message }}</h4>
+                <h4>用户： {{ userInfo && userInfo.username }}</h4>
                 <span>找到1个用户</span>
                 <a href="/admin/user-edit" class="btn btn-primary new">新增用户</a>
             </div>

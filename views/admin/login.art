@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>用户登录</title>
+    <!-- 引入facicon.ico网页图标 -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/admin/css/base.css">
 </head>
@@ -11,18 +13,20 @@
 <body>
     <div class="login-body">
         <div class="login-container">
-            <h4 class="title">登录博客</h4>
+            <h4 class="title">快 速 登 录</h4>
             <div class="login">
                 <form action="/admin/login" method="post" id="loginForm">
                     <div class="form-group">
-                        <label>邮件</label>
+                        <label>邮箱</label>
                         <input type="email" name='email' class="form-control" placeholder="请输入邮件地址">
                     </div>
                     <div class="form-group">
                         <label>密码</label>
                         <input type="password" name='password' class="form-control" placeholder="请输入密码">
                     </div>
-                    <button type="submit" class="btn btn-primary">登录</button>
+                    <div style="text-align:center">
+                        <button type="submit" class="btn btn-primary right">登录</button>
+                    </div>
                 </form>
             </div>
             <div class="tips"></div>
